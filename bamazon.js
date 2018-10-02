@@ -28,7 +28,7 @@ function startApp() {
   connection.query("Select * FROM products", function (err, res) {
     if (err) throw err;
 
-    console.log("Response is :" + res);
+    // console.log("Response is :" + res);
     res.forEach(function (pokemon) {
       // console.log(pokemon);
 
@@ -60,7 +60,7 @@ function startPrompt() {
     inquirer
     .prompt([
       {
-        name: "askName",
+        name: "askID",
         type: "rawlist",
         choices: function (){
           var pokemonArray = [];
